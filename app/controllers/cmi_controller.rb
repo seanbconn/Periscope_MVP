@@ -1,0 +1,2 @@
+class CmiController < ApplicationController
+end

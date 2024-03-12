@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   # get "/", :controller => "tacos", :action => "index"
 
 resources "providers"
-
+resources "wrvu"
+resources "cmi"
+resources "quality"
 end

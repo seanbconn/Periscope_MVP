@@ -1,0 +1,2 @@
+class WrvuController < ApplicationController
+end

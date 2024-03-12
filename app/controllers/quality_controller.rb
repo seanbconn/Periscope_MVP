@@ -1,0 +1,2 @@
+class QualityController < ApplicationController
+end
