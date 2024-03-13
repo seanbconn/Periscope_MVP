@@ -2,6 +2,10 @@ class ProvidersController < ApplicationController
   def new
   end
 
+  def index
+    render 'index'
+  end
+
   def create
     @provider = provider_id.new
     @provider["first_name"] = params["first_name"]
