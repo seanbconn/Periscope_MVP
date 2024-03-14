@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       if BCrypt::Password.new(@provider["password"]) == params["password"]
         session["provider_id"] = @provider["id"]
         flash["notice"] = "Hello and welcome to Periscope!"
-        redirect_to "/posts"
+        redirect_to "/"
       else
         flash["notice"] = "Login Incorrect."
         redirect_to "/login"
@@ -25,4 +25,4 @@ class SessionsController < ApplicationController
     redirect_to "/login"
   end
 end
-end
+
