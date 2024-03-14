@@ -16,6 +16,6 @@ class ProvidersController < ApplicationController
     else
       flash["notice"] = "Email taken."
       redirect_to "/providers/new"
-
+    end
   end
 end
