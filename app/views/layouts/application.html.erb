@@ -43,7 +43,7 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <% @provider = Provider.find_by({ "id" => session["provider_id"] }) %>
           <% if @provider == nil %>
-            <li class="nav-item"><a href="/provider/new" class="nav-link">Sign Up</a></li>
+            <li class="nav-item"><a href="/providers/new" class="nav-link">Sign Up</a></li>
             <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
           <% else %>
             <li class="nav-text">Logged in as: <%= @provider["first_name"] %></li>
