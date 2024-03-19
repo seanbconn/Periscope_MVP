@@ -13,5 +13,5 @@ resources "quality"
   get("/logout", { :controller => "sessions", :action => "destroy" })
 
   # Define the root route
-  get("/", { :controller => "users", :action => "new" })  
+  get("/", { :controller => "providers", :action => "new" })  
 end
