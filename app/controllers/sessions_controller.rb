@@ -5,24 +5,24 @@ class SessionsController < ApplicationController
   def create
     @Provider = Provider.find_by({ "email" => params["email"] })
     if @Provider != nil
-      if BCrypt::Password.new(@provider["password"]) == params["password"]
-        session["provider_id"] = @provider["id"]
-        flash["notice"] = "Hello and welcome to Periscope!"
-        redirect_to "/"
+      if BCrypt::Password.new(@Provider["password"]) == params["password"]
+        session["provider_id"] = @Provider["id"]
+        flash["notice"] = "Login successful."
+        redirect_to "/dashboard"
       else
-        flash["notice"] = "Login Incorrect."
+        flash["notice"] = "Login unsuccessful."
         redirect_to "/login"
       end
     else
-      flash["notice"] = "Login Incorrect."
+      flash["notice"] = "Login unsuccessful."
       redirect_to "/login"
     end
   end
 
   def destroy
     session["provider_id"] = nil
-    flash["notice"] = "Goodbye."
-    redirect_to "/login"
+    flash["notice"] = "Goodbye, see you next time."
+    redirect_to "/"
   end
 end
 
